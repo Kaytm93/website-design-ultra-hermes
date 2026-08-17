@@ -1,18 +1,4 @@
-# Download and sync leftovers from the original folder
-_to_delete/
-_incoming-*/
-_wdu-sync-*.zip
-wdu-*.tgz
-ziqxczzS
-
-# Private working notes; not part of the distributed plugin
-project-vault/
-
-# Tool output
-website-design-ultra/.playwright-cli/
-website-design-ultra/output/
-node_modules/
-*.log
-
-# macOS
+__pycache__/
+*.py[cod]
 .DS_Store
+.hermes/

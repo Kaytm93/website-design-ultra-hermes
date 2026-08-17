@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "website-design-ultra-hermes",
+  "version": "1.9.1",
+  "description": "Hermes-compatible website and immersive 3D design guidance with evidence-led content, accessibility, anti-slop checks, and responsive art direction.",
+  "author": {
+    "name": "Kay"
+  },
+  "homepage": "https://github.com/Kaytm93/website-design-ultra",
+  "repository": "https://github.com/Kaytm93/website-design-ultra",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "frontend",
+    "accessibility",
+    "anti-slop",
+    "content-design",
+    "responsive",
+    "3d"
+  ]
+}
