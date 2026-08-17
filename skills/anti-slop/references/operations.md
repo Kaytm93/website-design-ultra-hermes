@@ -74,7 +74,7 @@ past two thirds of a repository reports a pass it did not earn. The skip is a
 default, not an exclusion: `--path .claude/notes` lints that directory.
 
 **Register per file, without `--profile`.** Repo prose — `README`, `CHANGELOG`,
-`AGENTS.md`, `CLAUDE.md`, and Markdown outside a shipped-copy path — is judged in
+agent instruction files, and Markdown outside a shipped-copy path — is judged in
 the `docs` register. Internal notes legitimately run em dashes, tick-box
 headings, and one heading per paragraph; scoring them as marketing copy is what
 turned that site's two real findings into thousands. Three Tier-1 rules are

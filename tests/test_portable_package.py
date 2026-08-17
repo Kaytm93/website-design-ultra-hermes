@@ -62,17 +62,24 @@ class PortablePackageTests(unittest.TestCase):
             self.assertEqual(match.group(1).strip(), skill_name)
             self.assertRegex(content, r"\ndescription:\s*.+\n", skill_name)
 
-    def test_portable_package_contains_no_automatic_persistence_or_provider_scripts(self) -> None:
-        forbidden_paths = [ROOT / "commands", ROOT / "scripts", ROOT / ".claude-plugin", ROOT / ".codex-plugin"]
+    def test_portable_package_contains_only_non_executable_components(self) -> None:
+        forbidden_paths = [
+            ROOT / "commands",
+            ROOT / "scripts",
+            ROOT / ".claude-plugin",
+            ROOT / ".codex-plugin",
+            ROOT / "mcp.json",
+        ]
         for path in forbidden_paths:
             self.assertFalse(path.exists(), path)
-        for path in ROOT.rglob("*"):
-            if "tests" in path.parts:
-                continue
-            if path.is_file() and path.suffix in {".sh", ".mjs", ".js", ".py"}:
-                text = path.read_text(encoding="utf-8", errors="ignore")
-                self.assertNotIn("launchctl", text.lower(), path)
-                self.assertNotIn("launchagents", text.lower(), path)
+        executable_files = [
+            path
+            for path in ROOT.rglob("*")
+            if "tests" not in path.parts
+            and path.is_file()
+            and path.suffix in {".sh", ".mjs", ".js", ".py"}
+        ]
+        self.assertFalse(executable_files, executable_files)
 
 
 if __name__ == "__main__":

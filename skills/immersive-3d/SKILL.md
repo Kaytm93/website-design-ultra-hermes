@@ -186,7 +186,7 @@ with the first runnable build the browser check becomes mandatory.
 
 1. One sentence: why 3D is justified here plus the selected stack layer
 2. Art-direction contract with desktop, portrait, and poster shot
-3. `npm install …` (R3F) or importmap (vanilla)
+3. Declare exact, pinned R3F dependencies (or an import map for vanilla); do not run installers automatically
 4. Working code with reduced-motion, DOM, and 2D fallback
 5. Perf budget plus Poster/Low/Medium/High matrix
 6. Customization hooks (colors, light, exposure, intensity, camera distance)

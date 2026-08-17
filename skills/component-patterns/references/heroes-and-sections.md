@@ -22,7 +22,7 @@ Use a 12-column grid and allow the media to anchor differently from the copy:
     <p class="mt-6 max-w-[55ch]">Supporting evidence.</p>
   </div>
   <div class="col-span-12 self-end md:col-span-5">
-    <!-- Meaningful media with alt text, or decorative media hidden from AT -->
+    <!-- Meaningful media gets an accessible alternative; decorative media is omitted from the accessibility tree -->
   </div>
 </section>
 ```
